@@ -1,0 +1,576 @@
+@import url(normolize.css);
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: "Open Sans";
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 9.03012px 27.0904px rgba(176, 190, 197, 0.32), 0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32);
+}
+
+.header__button {
+    position: absolute;
+    right: 20px;
+    height: 45px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.header__img {
+    margin-right: 53px;
+}
+
+.header__search {
+    width: 581px;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    height: 19px;
+}
+
+.main {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    /* black */
+    color: #333333;
+}
+
+.main__table {
+    width: 100%;
+    margin-left: 20px;
+
+}
+
+.main__row {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.main__hcol:nth-child(1) {
+    cursor: pointer;
+    margin-right: 10px;
+    grid-column: 1 / span 1;
+    text-align: center;
+}
+
+.main__hcol:nth-child(2) {
+    grid-column: 3 / span 5;
+    cursor: pointer;
+}
+
+.main__hcol:nth-child(3) {
+    grid-column: 8 / span 3;
+    cursor: pointer;
+
+}
+
+.main__hcol:nth-child(4) {
+    grid-column: 11 / span 3;
+    cursor: pointer;
+
+}
+
+.main__hcol:nth-child(5) {
+    grid-column: 14 / span 3;
+
+}
+
+.main__hcol:nth-child(6) {
+    grid-column: 17 / span 2;
+    text-align: start;
+}
+
+.main__hcol {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B0B0B0;
+    user-select: none;
+    position: relative;
+}
+.main__hcol > p {
+    font-size: 10px;
+    margin: 0;
+    color: #9873FF;
+    position: absolute;
+    left: 153px;
+    bottom: -1px;
+}
+
+.id_sort {
+    position: absolute;
+    left: 12px;
+}
+
+.main__load {
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    background-image: url(../img/load.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 12px 26px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #9873FF;
+    color: #9873FF;
+}
+
+.main__btn_div {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+}
+
+.main__btn span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+}
+.div {
+    display: block;
+}
+.contact {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    padding: 20px;
+    border-top: 1px solid #C8C5D1;
+}
+.contact:nth-child(1) {
+    border-top: none;
+    padding-top: 30px;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.id {
+    cursor: pointer;
+    grid-column: 1 / span 1;
+    grid-row: 1;
+}
+.fio {
+    grid-column: 3 / span 5;
+    grid-row: 1;
+    padding-right: 10px;
+}
+.createDiv {
+    grid-column: 8 / span 3;
+    grid-row: 1;
+}
+.editDiv {
+    grid-column: 11 / span 3;
+    grid-row: 1;
+}
+.timeCreate, .timeEdit {
+    color: rgba(176, 176, 176, 1);
+}
+.actions {
+    grid-column: 17 / span 3;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40%;
+}
+.edit {
+    position: relative;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.edit:before {
+    content: "";
+    background-image: url("../img/edit.svg");
+    position: absolute;
+    left: -16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    
+}
+.delete {
+    position: relative;
+    /* margin-left: 16px; */
+    cursor: pointer;
+    grid-row: 1;
+}
+.delete:before {
+    content: "";
+    background-image: url("../img/delet.svg");
+    position: absolute;
+    left: -16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+}
+
+
+.back {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.window {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+    /* left: 33%; */
+    top: -100vh;
+    /* width: 30%; */
+    /* min-width: 500px; */
+    width: 600px;
+    background-color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+.x {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    background-image: url("../img/x.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.window__head {
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    user-select: none;
+}
+
+.window__form > div {
+    position: relative;
+}
+
+.names {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 7%;
+    outline: none;
+    height: 19px;
+}
+
+.names:not(:placeholder-shown) ~ label {
+    left: 5px;
+    top: -14px;
+    font-size: 15px;
+}
+
+.names:focus ~ label {
+    left: 5px;
+    top: -14px;
+    font-size: 15px;
+}
+
+.names ~ label {
+    transition: left 300ms, top 300ms, font-size 300ms;
+}
+
+.window__form > div > label {
+    pointer-events: none;
+    color: gray;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 10px;
+    width: 10px;
+    content: "ll";
+}
+
+label > span {
+    color: #9873FF;
+}
+
+.window__form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.add_contact {
+    display: flex;
+    background-color: rgba(200, 197, 209, 0.3);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.data_div {
+    width: 100%;
+    max-height: 30vh;
+    overflow-y: auto;
+    padding-bottom: 5px;
+}
+
+.add_btn {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.add_btn > * {
+    pointer-events: none;
+}
+
+.btn_create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 33%;
+    margin: auto;
+    background-color: rgb(152, 115, 255);
+    border: none;
+    color: white;
+    padding: 10px 20px ;
+}
+
+.btn_cancel {
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.data {
+    margin: auto;
+    width: 87%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    min-height: 30px;
+}
+
+.data > select {
+    background-color: rgba(200, 197, 209, 0.6);
+    user-select: none;
+}
+
+.data > * {
+    border-radius: 0;
+    border: 1px solid grey;
+    outline: none;
+}
+
+.data > input {
+    width: 100%;
+    height: 30px;
+}
+
+.del_div {
+    min-width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 197, 209, 0.6);
+    cursor: pointer;
+    user-select: none;
+}
+
+.tel {
+    background-image: url(../img/phone.svg);
+}
+
+.dark_theme > .main > .main__load > .contact > .contacts > .tel {
+    background-image: url(../img/phoneDark.svg);
+}
+
+.vk {
+    background-image: url(../img/vk.svg);
+
+}
+
+.email {
+    background-image: url(../img/mail.svg);
+}
+
+.twitter {
+    background-image: url(../img/twitter.svg);
+}
+
+.facebook {
+    background-image: url(../img/fb.svg);
+}
+
+.contacts {
+    grid-column: 14 / span 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    max-width: 108px;
+    max-height: 51px;
+    flex-wrap: nowrap;
+}
+
+.contacts_true {
+    flex-wrap: wrap;
+}
+
+.contact_icon, .contact_icons_more {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact_icons_more {
+    box-sizing: border-box;
+    border: 1px solid #9873FF;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+.contact_icon {
+    display: flex;
+    justify-content: center;
+} 
+
+.contact_info {
+    position: absolute;
+    height: fit-content;
+    bottom: 20.5px;
+    font-size: 12px;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    padding: 7px 15px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.contact_info::before {
+    content: "";
+    position: absolute;
+    top: 85%; 
+    width: auto;
+    border: 10px solid transparent;
+    border-top: 10px solid black;
+    pointer-events: none;
+}
+
+.error {
+    color: #F06A4D;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.p_id {
+    position: absolute;
+    color: gray;
+    top: 30px;
+    left: 5%;
+}
+
+th {
+    cursor: pointer;
+    user-select: none;
+}
+
+.d-none {
+    display: none;
+}
+
+.delDataBtn {
+    pointer-events: none;
+}
+
+.dark_theme, .dark_theme > .header, .dark_theme > .main > .main__load, .dark_theme > .header > .header__search, .dark_theme > .header > .header__search::placeholder, .dark_theme > .header > .header__button, .dark_theme > .main > .main__title, .dark_theme > .window > .window__form > div > input, .dark_theme > .window > .add_contact > .data_div > .data > *{
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+.dark_theme > .main > .contact, .dark_theme > .window, .dark_theme > .window > .window__form > div > input {
+    background-color: rgb(49, 49, 49);
+}
+.dark_theme > .window > .window__form > div > label {
+    color: rgba(255, 255, 255, 0.7);
+}
+.dark_theme > .header > .header__button {
+    border: 1px solid white;
+}
+.dark_theme > .header > .header__search {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.dark_theme > .main > .main__load {
+    box-sizing: border-box;
+    box-shadow: 0 0 3px white;
+}
+.dark_theme > .window > .add_contact {
+    background-color: rgba(200, 197, 209, 0.1);
+}

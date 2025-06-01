@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skb</title>
+</head>
+
+<body>
+    <header class="header">
+        <p class="header__link"><img alt="лого" class="header__img"></p>
+        <input type="text" class="header__search" placeholder="Введите запрос">
+        <button class="header__button">Change theme</button>
+    </header>
+    <main class="main">
+        <h1 class="main__title">Клиенты</h1>
+        <table class="main__table">
+            <div class="main__row">
+                <div class="main__hcol">ID <img class="id_sort"></div>
+                <div class="main__hcol">Фамилия, имя, отчество <img class="fio_sort">
+                    <p class="fio_sort_p"></p>
+                </div>
+                <div class="main__hcol">Дата и время создания <img class="create_sort"></div>
+                <div class="main__hcol">Последнее изменение <img class="edit_sort"></div>
+                <div class="main__hcol">Контакты</div>
+                <div class="main__hcol">Действия</div>
+            </div>
+        </table>
+        <div class="main__load"></div>
+        <div class="main__btn_div">
+        <button class="main__btn"> 
+            <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+            </svg>
+            <span>Добавить клиента</span>
+        </button>
+        </div>
+    </main>
+</body>
+<template id="contact">
+    <div class="contact">
+        <p class="id div"></p>
+        <p class="fio div"></p>
+        <div class="d-flex createDiv">
+            <p class="dateCreate div"></p>
+            <p class="timeCreate div"></p>
+        </div>
+        <div class="d-flex editDiv">
+            <p class="dateEdit div"></p>
+            <p class="timeEdit div"></p>
+        </div>
+        <div class="contacts"></div>
+        <div class="actions">
+            <p class="edit div">Изменить</p>
+            <p class="delete div">Удалить</p>
+        </div>
+    </div>
+</template>
+
+<template id="contactData">
+    <div class="data">
+        <select class="select_contcts">
+            <option value="tel">Телефон</option>
+            <option value="twitter">Twitter</option>
+            <option value="email">Email</option>
+            <option value="vk">Vk</option>
+            <option value="facebook">Facebook</option>
+        </select>
+        <input placeholder="Введите данные контакта">
+        <div class="del_div">
+            <img class="delDataBtn" src="img/cancel.svg">
+        </div>
+    </div>
+</template>
+
+<template id="editWindow">
+    <h2 class="window__head">Изменить данные</h2>
+    <p class="p_id">ID: 181912</p>
+    <form class="window__form">
+        <div class="surname_div">
+            <input type="text" class="surname names" placeholder=" "><label>Фамилия<span>*</span></label>
+        </div>
+        <div class="name_div">
+            <input type="text" class="name names" placeholder=" "><label>Имя<span>*</span></label>
+        </div>
+        <div class="lastname_div">
+            <input type="text" class="lastname names" placeholder=" "><label>Отчество</label>
+        </div>
+    </form>
+    <div class="add_contact">
+        <div class="data_div"></div>
+        <div class="add_btn">
+            <img src="img/create.svg" class="add_contact_img">
+            <h3>Добавить контакт</h3>
+        </div>
+    </div>
+    <button class="btn_create">Сохранить</button>
+    <p class="btn_cancel">Удалить клиента</p>
+</template>
+
+<template id="createWindow">
+    <h2 class="window__head">Новый клиент</h2>
+    <form class="window__form">
+        <div class="surname_div">
+            <input type="text" class="surname names" placeholder=" "><label>Фамилия<span>*</span></label>
+        </div>
+        <div class="name_div">
+            <input type="text" class="name names" placeholder=" "><label>Имя<span>*</span></label>
+        </div>
+        <div class="lastname_div">
+            <input type="text" class="lastname names" placeholder=" "><label>Отчество</label>
+        </div>
+    </form>
+    <div class="add_contact">
+        <div class="data_div"></div>
+        <div class="add_btn">
+            <img src="img/create.svg" class="add_contact_img">
+            <h3>Добавить контакт</h3>
+        </div>
+    </div>
+    <button class="btn_create">Сохранить</button>
+    <p class="btn_cancel">Отмена</p>
+</template>
+
+<template id="deleteWindow">
+    <div class="window">
+        <div class="x"></div>
+        <h2 class="window__head text-center">Удаление клиента</h2>
+        <p class="text-center">Вы действительно хотите удалить данного клиента?</p>
+        <button class="btn_create">Удалить</button>
+        <p class="btn_cancel">Отмена</p>
+    </div>
+</template>
+
+</html>
