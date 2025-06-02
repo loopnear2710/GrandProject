@@ -319,5 +319,3 @@ loadCards()
 sort();
 theme();
 
-// Made by chatGPT
-// Grazhdantcev is a god
